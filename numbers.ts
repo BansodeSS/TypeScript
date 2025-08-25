@@ -57,3 +57,37 @@ console.log("fixed:", fixed);
 console.log("exponential:", exponential);
 console.log("parsed:", parsed);
 console.log("add(7, 5):", add(7, 5));
+
+// Math functions
+let absValue: number = Math.abs(-15); // 15
+let maxValue: number = Math.max(10, 20, 30); // 30
+let minValue: number = Math.min(10, 20, 30); // 10
+let randomValue: number = Math.random(); // Random number between 0 and 1
+let rounded: number = Math.round(3.7); // 4
+let floored: number = Math.floor(3.7); // 3
+let ceiled: number = Math.ceil(3.2); // 4
+let power: number = Math.pow(2, 3); // 8
+let sqrtValue: number = Math.sqrt(16); // 4
+
+// Number conversion
+let strToNum: number = Number("123.45"); // 123.45
+let invalidNum: number = Number("abc"); // NaN
+
+// Checking for NaN and finite numbers
+let isNumFinite: boolean = Number.isFinite(100); // true
+let isNumNaN: boolean = Number.isNaN(NaN); // true
+
+// Usage
+console.log("absValue:", absValue);
+console.log("maxValue:", maxValue);
+console.log("minValue:", minValue);
+console.log("randomValue:", randomValue);
+console.log("rounded:", rounded);
+console.log("floored:", floored);
+console.log("ceiled:", ceiled);
+console.log("power:", power);
+console.log("sqrtValue:", sqrtValue);
+console.log("strToNum:", strToNum);
+console.log("invalidNum:", invalidNum);
+console.log("isNumFinite:", isNumFinite);
+console.log("isNumNaN:", isNumNaN);
