@@ -74,8 +74,8 @@ let strToNum: number = Number("123.45"); // 123.45
 let invalidNum: number = Number("abc"); // NaN
 
 // Checking for NaN and finite numbers
-let isNumFinite: boolean = Number.isFinite(100); // true
-let isNumNaN: boolean = Number.isNaN(NaN); // true
+let isNumFinite: boolean = isFinite(100); // true
+let isNumNaN: boolean = isNaN(NaN); // true
 
 // Usage
 console.log("absValue:", absValue);
