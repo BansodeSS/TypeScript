@@ -44,3 +44,55 @@ console.log("char:", char);
 console.log("index:", index);
 console.log("trimmed:", trimmed);
 console.log("isEqual:", isEqual);
+
+// Reverse a String
+function reverseString(s: string): string {
+    return s.split('').reverse().join('');
+}
+// Check for Palindrome
+function isPalindrome(s: string): boolean {
+    const normalized = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    return normalized === normalized.split('').reverse().join('');
+}
+// First Unique Character in a String
+function firstUniqChar(s: string): number {
+    for (let i = 0; i < s.length; i++) {
+        if (s.indexOf(s[i]) === s.lastIndexOf(s[i])) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+// Longest Common Prefix
+function longestCommonPrefix(strs: string[]): string {
+    if (strs.length === 0) return "";
+    let prefix = strs[0];
+    for (let i = 1; i < strs.length; i++) {
+        while (strs[i].indexOf(prefix) !== 0) {
+            prefix = prefix.slice(0, -1);
+            if (prefix === "") return "";
+        }
+    }
+    return prefix;
+}
+
+// Valid Anagram
+function isAnagram(s: string, t: string): boolean {
+    if (s.length !== t.length) return false;
+    const count: { [key: string]: number } = {};
+    for (const char of s) {
+        count[char] = (count[char] || 0) + 1;
+    }
+    for (const char of t) {
+        if (!count[char]) return false;
+        count[char]--;
+    }
+    return true;
+}
+// Call all functions with sample inputs
+console.log("reverseString('hello'):", reverseString('hello')); // "olleh"
+console.log("isPalindrome('racecar'):", isPalindrome('racecar')); // true
+console.log("firstUniqChar('leetcode'):", firstUniqChar('leetcode')); // 0
+console.log("longestCommonPrefix(['flower','flow','flight']):", longestCommonPrefix(['flower','flow','flight'])); // "fl"
+console.log("isAnagram('anagram', 'nagaram'):", isAnagram('anagram', 'nagaram')); // true
