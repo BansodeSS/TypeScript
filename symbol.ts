@@ -4,8 +4,8 @@
  */
 
 // Creating symbols
-const sym1 = Symbol();
-const sym2 = Symbol("description");
+const sym1: symbol = Symbol();
+const sym2: symbol = Symbol("description");
 
 // Symbols are unique
 console.log("sym1 === sym2:", sym1 === sym2); // false
