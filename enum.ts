@@ -19,7 +19,8 @@ enum Status {
 }
 
 // Usage
-let move: Direction = Direction.Left;
+let move: Direction = Direction.Up;
 let currentStatus: Status = Status.Pending;
 
 console.log("move:", move); //
+console.log("Current Status:",currentStatus)
